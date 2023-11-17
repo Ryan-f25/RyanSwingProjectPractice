@@ -6,6 +6,7 @@ public class SwingPracticeHard {
     private JFrame mainFrame;
     private JPanel controlPanel;
     private JPanel topPanel;
+    private JPanel bigPanel;
     private JLabel statusLabel;
     private TextArea ta;
     private JButton button;
@@ -30,7 +31,10 @@ public class SwingPracticeHard {
         controlPanel.setLayout(new GridLayout(3,3));
 
         JPanel topPanel = new JPanel();
-        topPanel.setLayout(new GridLayout(1,2));
+        topPanel.setLayout(new GridLayout(2,1));
+
+        JPanel bigPanel = new JPanel();
+        bigPanel.setLayout(new GridLayout(1,2));
 
         JLabel statusLabel1 = new JLabel("Top 0", SwingConstants.CENTER);
         JLabel statusLabel2 = new JLabel("Top 0", SwingConstants.CENTER);
@@ -56,11 +60,15 @@ public class SwingPracticeHard {
         controlPanel.add(button4);
         controlPanel.add(statusLabel5);
 
-        topPanel.add(button5);
         topPanel.add(statusLabel6);
+        topPanel.add(button5);
 
-        mainFrame.add(controlPanel);
-        mainFrame.add(topPanel);
+
+        bigPanel.add(controlPanel);
+        bigPanel.add(topPanel);
+
+        mainFrame.add(bigPanel);
+
 
 
         mainFrame.setVisible(true);
